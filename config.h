@@ -64,6 +64,10 @@ static const char *termcmd[]  = { "urxvt", NULL };
 static const char *upvol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+2%",     NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-2%",     NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle",  NULL };
+/* multimedia keys */
+static const char *mmplay[] = { "playerctl", "play-pause", NULL };
+static const char *mmnext[] = { "playerctl", "next",       NULL };
+static const char *mmprev[] = { "playerctl", "previous",   NULL };
 
 static Key keys[] = {
   /* modifier                     key                      function        argument */
@@ -94,6 +98,10 @@ static Key keys[] = {
   { 0,                            XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
   { 0,                            XF86XK_AudioMute,        spawn,          {.v = mutevol } },
   { 0,                            XF86XK_AudioRaiseVolume, spawn,          {.v = upvol   } },
+  /* multimedia keys */
+  { 0,                            XF86XK_AudioPlay,        spawn,          {.v = mmplay } },
+  { 0,                            XF86XK_AudioNext,        spawn,          {.v = mmnext } },
+  { 0,                            XF86XK_AudioPrev,        spawn,          {.v = mmprev } },
   /* quit */
   { MODKEY|ShiftMask,             XK_e,                    quit,           {0} },
   TAGKEYS(                        XK_1,                                    0)
