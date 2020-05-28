@@ -12,7 +12,7 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "hack:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char dmenufont[]       = "hack:size=10";
 static const char col_gray1[]       = "#2e3440";
 static const char col_gray2[]       = "#434c5e";
 static const char col_gray3[]       = "#e5e9f0";
@@ -77,8 +77,8 @@ static const char *mmplay[] = { "playerctl", "play-pause", NULL };
 static const char *mmnext[] = { "playerctl", "next",       NULL };
 static const char *mmprev[] = { "playerctl", "previous",   NULL };
 /* brightness */
-static const char *upbright[]   = {"light", "-A", "5"};
-static const char *downbright[] = {"light", "-U", "5"};
+static const char *upbright[]   = {"light", "-A", "5", NULL};
+static const char *downbright[] = {"light", "-U", "5", NULL};
 
 static Key keys[] = {
   /* modifier                     key                        function        argument */
@@ -123,6 +123,9 @@ static Key keys[] = {
   /* brightness keys */
   { 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = upbright   } },
   { 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = downbright } },
+  /* screenshot */
+  { 0,                            XK_Print,                  spawn,          SHCMD("maim -su | xclip -sel clip -t image/png") },
+  { ShiftMask,                    XK_Print,                  spawn,          SHCMD("maim -u | xclip -sel clip -t image/png")  },
   /* quit */
   { MODKEY|ShiftMask,             XK_e,                      quit,           {0} },
   TAGKEYS(                        XK_1,                                      0)
