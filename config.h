@@ -123,6 +123,9 @@ static Key keys[] = {
   /* brightness keys */
   { 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = upbright   } },
   { 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = downbright } },
+  /* screenshot */
+  { 0,                            XK_Print,                  spawn,          SHCMD("maim -su | xclip -sel clip -t image/png") },
+  { ShiftMask,                    XK_Print,                  spawn,          SHCMD("maim -u | xclip -sel clip -t image/png")  },
   /* quit */
   { MODKEY|ShiftMask,             XK_e,                      quit,           {0} },
   TAGKEYS(                        XK_1,                                      0)
