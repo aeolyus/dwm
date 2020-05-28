@@ -12,7 +12,7 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "hack:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char dmenufont[]       = "hack:size=10";
 static const char col_gray1[]       = "#2e3440";
 static const char col_gray2[]       = "#434c5e";
 static const char col_gray3[]       = "#e5e9f0";
