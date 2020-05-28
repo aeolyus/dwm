@@ -72,6 +72,7 @@ static const char *termcmd[]  = { "urxvt", NULL };
 static const char *upvol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+2%",     NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-2%",     NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle",  NULL };
+static const char *dwmblocksvol[] = { "pkill", "-RTMIN+1", "dwmblocks", NULL };
 /* multimedia keys */
 static const char *mmplay[] = { "playerctl", "play-pause", NULL };
 static const char *mmnext[] = { "playerctl", "next",       NULL };
@@ -116,6 +117,9 @@ static Key keys[] = {
   { 0,                            XF86XK_AudioLowerVolume,   spawn,          {.v = downvol } },
   { 0,                            XF86XK_AudioMute,          spawn,          {.v = mutevol } },
   { 0,                            XF86XK_AudioRaiseVolume,   spawn,          {.v = upvol   } },
+  { 0,                            XF86XK_AudioLowerVolume,   spawn,          {.v = dwmblocksvol } },
+  { 0,                            XF86XK_AudioMute,          spawn,          {.v = dwmblocksvol } },
+  { 0,                            XF86XK_AudioRaiseVolume,   spawn,          {.v = dwmblocksvol } },
   /* multimedia keys */
   { 0,                            XF86XK_AudioPlay,          spawn,          {.v = mmplay } },
   { 0,                            XF86XK_AudioNext,          spawn,          {.v = mmnext } },
