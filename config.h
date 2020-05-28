@@ -77,8 +77,8 @@ static const char *mmplay[] = { "playerctl", "play-pause", NULL };
 static const char *mmnext[] = { "playerctl", "next",       NULL };
 static const char *mmprev[] = { "playerctl", "previous",   NULL };
 /* brightness */
-static const char *upbright[]   = {"light", "-A", "5"};
-static const char *downbright[] = {"light", "-U", "5"};
+static const char *upbright[]   = {"light", "-A", "5", NULL};
+static const char *downbright[] = {"light", "-U", "5", NULL};
 
 static Key keys[] = {
   /* modifier                     key                        function        argument */
