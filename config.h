@@ -130,6 +130,8 @@ static Key keys[] = {
   /* screenshot */
   { 0,                            XK_Print,                  spawn,          SHCMD("maim -su | xclip -sel clip -t image/png") },
   { ShiftMask,                    XK_Print,                  spawn,          SHCMD("maim -u | xclip -sel clip -t image/png")  },
+  /* sticky */
+  { MODKEY,                       XK_s,                      togglesticky,   {0} },
   /* quit */
   { MODKEY|ShiftMask,             XK_e,                      quit,           {0} },
   TAGKEYS(                        XK_1,                                      0)
