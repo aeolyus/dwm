@@ -2,6 +2,7 @@ dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
 
+![screenshot](https://i.imgur.com/bUPdO5g.png)
 
 Requirements
 ------------
