@@ -4,6 +4,15 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 ![screenshot](https://i.imgur.com/bUPdO5g.png)
 
+## Patches
+- fibonacci
+- sticky
+- systray
+- warp
+- pertag
+- gaps
+- open floating centered
+
 Requirements
 ------------
 In order to build dwm you need the Xlib header files.
