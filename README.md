@@ -6,12 +6,19 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 ## Patches
 - [fibonacci](https://dwm.suckless.org/patches/fibonacci/)
+    adds spiral and dwindle layouts
 - [sticky](https://dwm.suckless.org/patches/sticky/)
+    enables client to be visible on all tags
 - [systray](https://dwm.suckless.org/patches/systray/)
+    adds a systray
 - [warp](https://dwm.suckless.org/patches/warp/)
+    warps mouse cursor to center of focused window
 - [pertag](https://dwm.suckless.org/patches/pertag/)
+    keeps layout, mwfact, barpos, nmaster per tag
 - [gaps](https://dwm.suckless.org/patches/ru_gaps/)
-- [open floating centered](https://git.io/JfXYZ)
+    adds runtime resizable, useless gaps
+- [open floating centered](https://git.io/JfXYR)
+    opens floating windows in the center of the screen
 
 Requirements
 ------------
