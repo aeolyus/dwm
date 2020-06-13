@@ -33,7 +33,7 @@ necessary as root):
 make clean install
 ```
 
-##Running dwm
+## Running dwm
 Add the following line to your .xinitrc to start dwm using startx:
 ``` sh
 exec dwm
