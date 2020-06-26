@@ -6,6 +6,10 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 ## Patches
 - [fibonacci](https://dwm.suckless.org/patches/fibonacci/)
     adds spiral and dwindle layouts
+- [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/)
+    actually fullscreen window instead of toggling status bar and monocle layout
+- [alwaysfullscreen](https://dwm.suckless.org/patches/alwaysfullscreen/)
+    do not allow focus to drift from active fullscreen client
 - [sticky](https://dwm.suckless.org/patches/sticky/)
     enables client to be visible on all tags
 - [systray](https://dwm.suckless.org/patches/systray/)

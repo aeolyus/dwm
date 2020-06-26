@@ -245,6 +245,7 @@ static void tagmon(const Arg *arg);
 static void tile(Monitor *);
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
+static void togglefullscr(const Arg *arg);
 static void togglesticky(const Arg *arg);
 static void toggletag(const Arg *arg);
 static void toggleview(const Arg *arg);
@@ -967,7 +968,7 @@ focusstack(const Arg *arg)
 {
   Client *c = NULL, *i;
 
-  if (!selmon->sel)
+  if (!selmon->sel || selmon->sel->isfullscreen)
     return;
   if (arg->i > 0) {
     for (c = selmon->sel->next; c && !ISVISIBLE(c); c = c->next);
@@ -1965,6 +1966,14 @@ togglefloating(const Arg *arg)
       selmon->sel->w, selmon->sel->h, 0);
   arrange(selmon);
 }
+
+void
+togglefullscr(const Arg *arg)
+{
+  if(selmon->sel)
+    setfullscreen(selmon->sel, !selmon->sel->isfullscreen);
+}
+
 
 void
 togglesticky(const Arg *arg)
