@@ -22,6 +22,8 @@ dwm is an extremely fast, small, and dynamic window manager for X.
     adds runtime resizable, useless gaps
 - [open floating centered](https://git.io/JfXYR)
     opens floating windows in the center of the screen
+- [save floats](https://dwm.suckless.org/patches/save_floats/)
+    saves size and position of every floating window
 
 ## Requirements
 In order to build dwm you need the Xlib header files.
